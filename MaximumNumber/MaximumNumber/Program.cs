@@ -15,7 +15,16 @@ namespace MaximumNumber
             Console.WriteLine(maxNumberTwo + " is maximum");
 
             int maxNumberThree = max.MaxInteger(60, 50, 100);
-            Console.WriteLine(maxNumberThree + " is maximum");
+            Console.WriteLine(maxNumberThree + " is maximum"); 
+            
+            float floatMaxOne = max.MaxFloat(5.6f, 4.6f, 3.6f);
+            Console.WriteLine(floatMaxOne + " is maximum");
+
+            float floatMaxTwo = max.MaxFloat(3.6f, 5.6f, 4.6f);
+            Console.WriteLine(floatMaxTwo + " is maximum");
+
+            float floatMaxThree = max.MaxFloat(3.6f, 4.6f, 5.6f);
+            Console.WriteLine(floatMaxThree + " is maximum");
         }
     }
 }

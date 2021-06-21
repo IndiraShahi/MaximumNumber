@@ -22,31 +22,72 @@ namespace MaximumNumberTest
         public void GivenSecondNumberMax_WhenAct_ReturnSecondNumber()
         {
         
-        int firstNumber = 50;
-        int secondNumber = 60;
-        int thirdNumber = 40;
-        int expected = 60;
+            int firstNumber = 50;
+            int secondNumber = 60;
+            int thirdNumber = 40;
+            int expected = 60;
 
         
-        int maxNumber = Max.MaxInteger(firstNumber, secondNumber, thirdNumber);
+            int maxNumber = Max.MaxInteger(firstNumber, secondNumber, thirdNumber);
 
         
-        Assert.AreEqual(expected, maxNumber);
+            Assert.AreEqual(expected, maxNumber);
         }
         [Test]
         public void GivenThirdNumberMax_WhenAct_ReturnThirdNumber()
         {
-            
+
             int firstNumber = 60;
             int secondNumber = 50;
             int thirdNumber = 100;
             int expected = 100;
 
-            
+
             int maxNumber = Max.MaxInteger(firstNumber, secondNumber, thirdNumber);
 
+
+            Assert.AreEqual(expected, maxNumber);
+        }
+        [Test]
+        public void GivenFirstFloatNumberMax_WhenAct_ReturnFirstNumber()
+        {
+        
+            float firstNumber = 5.6f;
+            float secondNumber = 4.6f;
+            float thirdNumber = 3.6f;
+            float expected = 5.6f;
+
+            float maxNumber = Max.MaxFloat(firstNumber, secondNumber, thirdNumber);
+
+                
+            Assert.AreEqual(expected, maxNumber);
+        }
+
+        [Test]
+        public void GivenSecondFloatNumberMax_WhenAct_ReturnSecondNumber()
+        {
+            float firstNumber = 3.6f;
+            float secondNumber = 5.6f;
+            float thirdNumber = 4.6f;
+            float expected = 5.6f;
+
             
+            float maxNumber = Max.MaxFloat(firstNumber, secondNumber, thirdNumber);
+            Assert.AreEqual(expected, maxNumber);
+        }
+
+        [Test]
+        public void GivenThirdFloatNumberMax_WhenAct_ReturnThirdNumber()
+        {
+               
+            float firstNumber = 3.6f;
+            float secondNumber = 4.6f;
+            float thirdNumber = 5.6f;
+            float expected = 5.6f;
+            float maxNumber = Max.MaxFloat(firstNumber, secondNumber, thirdNumber);
             Assert.AreEqual(expected, maxNumber);
         }
     }
 }
+
+ 
