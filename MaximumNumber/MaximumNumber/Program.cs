@@ -25,6 +25,15 @@ namespace MaximumNumber
 
             float floatMaxThree = max.MaxFloat(3.6f, 4.6f, 5.6f);
             Console.WriteLine(floatMaxThree + " is maximum");
+
+            string stringMaxOne = max.Maxstring("Peach", "Apple", "Banana");
+            Console.WriteLine(stringMaxOne + " is maximum");
+
+            string stringMaxTwo = max.Maxstring("Apple", "Peach", "Banana");
+            Console.WriteLine(stringMaxTwo + " is maximum");
+
+            string stringMaxThree = max.Maxstring("Banana", "Apple", "Peach");
+            Console.WriteLine(stringMaxThree + " is maximum");
         }
     }
 }
