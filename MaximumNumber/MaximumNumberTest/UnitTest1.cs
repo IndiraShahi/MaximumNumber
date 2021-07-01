@@ -6,150 +6,134 @@ namespace MaximumNumberTest
 {
     public class Tests
     {
-        MaxNumber Max = new MaxNumber();
-
         [Test]
         public void GivenFirstNumberMax_WhenAct_ReturnFirstNumber()
         {
-            // Arrange
-            int firstNumber = 15;
-            int secondNumber = 5;
-            int thirdNumber = 10;
-            int expected = 15;
+            MaxNumber<int> max = new MaxNumber<int>(10, 8, 9);
+
+            // Arrange            
+            int expected = 10;
 
             // Act
-            int maxNumber = Max.Max<int>(firstNumber, secondNumber, thirdNumber);
-
+            int maxNumber = max.Max();
             // Assert
             Assert.AreEqual(expected, maxNumber);
         }
-
         [Test]
         public void GivenSecondNumberMax_WhenAct_ReturnSecondNumber()
         {
-            // Arrange
-            int firstNumber = 54;
-            int secondNumber = 62;
-            int thirdNumber = 43;
-            int expected = 62;
+            MaxNumber<int> max = new MaxNumber<int>(8, 10, 9);
 
-            // Act
-            int maxNumber = Max.Max<int>(firstNumber, secondNumber, thirdNumber);
-
+            // Arrange            
+            int expected = 10;
+            int maxNumber = max.Max();
             // Assert
             Assert.AreEqual(expected, maxNumber);
         }
+
 
         [Test]
         public void GivenThirdNumberMax_WhenAct_ReturnThirdNumber()
         {
+            MaxNumber<int> max = new MaxNumber<int>(9, 8, 10);
             // Arrange
-            int firstNumber = 50;
-            int secondNumber = 60;
-            int thirdNumber = 90;
-            int expected = 90;
+
+            int expected = 10;
 
             // Act
-            int maxNumber = Max.Max<int>(firstNumber, secondNumber, thirdNumber);
+
+            int maxNumber = max.Max();
 
             // Assert
             Assert.AreEqual(expected, maxNumber);
         }
-
         [Test]
         public void GivenFirstFloatNumberMax_WhenAct_ReturnFirstNumber()
         {
-            // Arrange
-            float firstNumber = 35.1f;
-            float secondNumber = 22.4f;
-            float thirdNumber = 31.9f;
-            float expected = 35.1f;
+            MaxNumber<float> max = new MaxNumber<float>(10.45f, 8.25f, 9.26f);
 
+            // Arrange            
+            float expected = 10.45f;
             // Act
-            float maxNumber = Max.Max<float>(firstNumber, secondNumber, thirdNumber);
+
+            float maxNumber = max.Max();
 
             // Assert
             Assert.AreEqual(expected, maxNumber);
         }
-
         [Test]
         public void GivenSecondFloatNumberMax_WhenAct_ReturnSecondNumber()
         {
+            MaxNumber<float> max = new MaxNumber<float>(8.25f, 10.45f, 9.26f);
+
             // Arrange
-            float firstNumber = 22.4f;
-            float secondNumber = 35.1f;
-            float thirdNumber = 31.9f;
-            float expected = 35.1f;
+
+            float expected = 10.45f;
 
             // Act
-            float maxNumber = Max.Max<float>(firstNumber, secondNumber, thirdNumber);
+            float maxNumber = max.Max();
 
             // Assert
             Assert.AreEqual(expected, maxNumber);
         }
-
         [Test]
         public void GivenThirdFloatNumberMax_WhenAct_ReturnThirdNumber()
         {
+            MaxNumber<float> max = new MaxNumber<float>(8.25f, 9.26f, 10.45f);
+
             // Arrange
-            float firstNumber = 31.9f;
-            float secondNumber = 22.4f;
-            float thirdNumber = 35.1f;
-            float expected = 35.1f;
+            float expected = 10.45f;
 
             // Act
-            float maxNumber = Max.Max<float>(firstNumber, secondNumber, thirdNumber);
+
+            float maxNumber = max.Max();
 
             // Assert
             Assert.AreEqual(expected, maxNumber);
         }
-
         [Test]
         public void GivenFirstStringWordMax_WhenAct_ReturnFirstWord()
         {
-            // Arrange
-            string firstWord = "Peach";
-            string secondWord = "Apple";
-            string thirdWord = "Banana";
+            MaxNumber<string> max = new MaxNumber<string>("Peach", "Apple", "Banana");
+
+            // Arrange            
             string expected = "Peach";
 
             // Act
-            string maxString = Max.Max<string>(firstWord, secondWord, thirdWord);
+            string maxString = max.Max();
 
             // Assert
             Assert.AreEqual(expected, maxString);
         }
-
         [Test]
         public void GivenSecondStringWordMax_WhenAct_ReturnSecondWord()
         {
-            // Arrange
-            string firstWord = "Apple";
-            string secondWord = "Peach";
-            string thirdWord = "Banana";
+            MaxNumber<string> max = new MaxNumber<string>("Apple", "Peach", "Banana");
+
+            // Arrange            
             string expected = "Peach";
 
             // Act
-            string maxString = Max.Max<string>(firstWord, secondWord, thirdWord);
-
+            string maxString = max.Max();
             // Assert
             Assert.AreEqual(expected, maxString);
         }
-
         [Test]
         public void GivenThirdStringWordMax_WhenAct_ReturnThirdWord()
         {
-            // Arrange
-            string firstWord = "Banana";
-            string secondWord = "Apple";
-            string thirdWord = "Peach";
+            MaxNumber<string> max = new MaxNumber<string>("Banana", "Apple", "Peach");
+
+            // Arrange            
             string expected = "Peach";
 
             // Act
-            string maxString = Max.Max<string>(firstWord, secondWord, thirdWord);
+           
+            string maxString = max.Max();
 
             // Assert
             Assert.AreEqual(expected, maxString);
+
+
         }
     }
 }

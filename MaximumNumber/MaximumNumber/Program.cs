@@ -7,10 +7,12 @@ namespace MaximumNumber
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to maximum number!");
-            MaxNumber max = new MaxNumber();
-            Console.WriteLine(max.Max<int>(20, 40, 30));
-            Console.WriteLine(max.Max<float>(5.1f, 6.5f, 5.5f));
-            Console.WriteLine(max.Max<string>("Apple", "Peach", "Banana"));
+            MaxNumber<int> max = new MaxNumber<int>(45, 56, 54);
+            MaxNumber<float> maxfloat = new MaxNumber<float>(45.45f, 56.12f, 54.457f);
+            MaxNumber<string> maxstring = new MaxNumber<string>("Apple", "Peach", "Banana");
+            Console.WriteLine(max.Max());
+            Console.WriteLine(maxfloat.Max());
+            Console.WriteLine(maxstring.Max());
         }
     }
 }
