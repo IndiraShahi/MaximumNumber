@@ -7,12 +7,16 @@ namespace MaximumNumber
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to maximum number!");
-            MaxNumber<int> max = new MaxNumber<int>(45, 56, 54);
-            MaxNumber<float> maxfloat = new MaxNumber<float>(45.45f, 56.12f, 54.457f);
-            MaxNumber<string> maxstring = new MaxNumber<string>("Apple", "Peach", "Banana");
-            Console.WriteLine(max.Max());
-            Console.WriteLine(maxfloat.Max());
-            Console.WriteLine(maxstring.Max());
+            MaxNumber max = new MaxNumber();
+
+            int[] intArray = { 1, 5, 10, 15, 20 };
+            max.MaxValue<int>(intArray);
+
+            double[] doubleArray = { 5.1, 6.2, 5.4, 6.3 };
+            max.MaxValue<double>(doubleArray);
+
+            string[] stringArray = { "5", "19", "10", "15" };
+            max.MaxValue<string>(stringArray);
         }
     }
 }
